@@ -16,6 +16,11 @@ struct HomeView: View {
                     Image(systemName: "gear")
                     Text("Settings")
             }.tag(0)
+            ContentView()
+                .tabItem{
+                    Image(systemName: "gear")
+                    Text("ContentView")
+            }.tag(1)
         }
     }
 }
