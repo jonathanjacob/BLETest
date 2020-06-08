@@ -22,6 +22,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     var deskHeightCharacteristic: CBCharacteristic!
     
     @Published var deskPeripheral: CBPeripheral! = nil
+    @Published var detectedPeripherals: [CBPeripheral] = []
     
     @Published var isSwitchedOn = false
     @Published var isScanning = false
@@ -38,16 +39,21 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
     
     func startScanning() {
         print("StartScanning")
-        peripherals.removeAll()
         myCentral.scanForPeripherals(withServices: [BluetoothDeskConnectionConstants.DESK_SERVICE_UUID], options: nil)
         self.isScanning = true
         print(BluetoothDeskConnectionConstants.DESK_CHARACTERISTIC_OUTPUT_DATA)
     }
     
     func stopScanning() {
-        //print("StopScanning")
-        myCentral.stopScan()
-        self.isScanning = false
+        if myCentral.isScanning {
+            myCentral.stopScan()
+            self.isScanning = false
+        }
+    }
+    
+    func connectToPeripheral(peripheral: CBPeripheral) {
+        self.deskPeripheral = peripheral
+        self.myCentral.connect(self.deskPeripheral, options: nil)
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -83,6 +89,11 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeriph
             self.deskPeripheral.delegate = self
             self.myCentral.connect(self.deskPeripheral, options: nil)
             self.isConnected = true
+        }
+        
+        let hasPeripheral = detectedPeripherals.contains{$0 == peripheral}
+        if !hasPeripheral {
+            detectedPeripherals.append(peripheral)
         }
         
         

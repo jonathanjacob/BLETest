@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD01E14B248D5C0100A5C52B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E14A248D5C0100A5C52B /* Constants.swift */; };
+		BD01E14D248DACC900A5C52B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E14C248DACC900A5C52B /* HomeView.swift */; };
+		BD01E14F248DAD2D00A5C52B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E14E248DAD2D00A5C52B /* SettingsView.swift */; };
+		BD01E151248DB57100A5C52B /* BluetoothDeviceSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E150248DB57100A5C52B /* BluetoothDeviceSelection.swift */; };
+		BD01E153248DB63700A5C52B /* PeripheralRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD01E152248DB63700A5C52B /* PeripheralRow.swift */; };
 		BD10C9BB248D39DD00C6521B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9BA248D39DD00C6521B /* AppDelegate.swift */; };
 		BD10C9BD248D39DD00C6521B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9BC248D39DD00C6521B /* SceneDelegate.swift */; };
 		BD10C9BF248D39DD00C6521B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD10C9BE248D39DD00C6521B /* ContentView.swift */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		BD01E14A248D5C0100A5C52B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BD01E14C248DACC900A5C52B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BD01E14E248DAD2D00A5C52B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BD01E150248DB57100A5C52B /* BluetoothDeviceSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothDeviceSelection.swift; sourceTree = "<group>"; };
+		BD01E152248DB63700A5C52B /* PeripheralRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralRow.swift; sourceTree = "<group>"; };
 		BD10C9B7248D39DD00C6521B /* BLETest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLETest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD10C9BA248D39DD00C6521B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD10C9BC248D39DD00C6521B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				BD10C9BA248D39DD00C6521B /* AppDelegate.swift */,
 				BD10C9BC248D39DD00C6521B /* SceneDelegate.swift */,
 				BD10C9CE248D3EC300C6521B /* BLEManager.swift */,
+				BD01E14C248DACC900A5C52B /* HomeView.swift */,
+				BD01E14E248DAD2D00A5C52B /* SettingsView.swift */,
+				BD01E150248DB57100A5C52B /* BluetoothDeviceSelection.swift */,
+				BD01E152248DB63700A5C52B /* PeripheralRow.swift */,
 				BD01E14A248D5C0100A5C52B /* Constants.swift */,
 				BD10C9BE248D39DD00C6521B /* ContentView.swift */,
 				BD10C9C0248D39DF00C6521B /* Assets.xcassets */,
@@ -152,9 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD01E153248DB63700A5C52B /* PeripheralRow.swift in Sources */,
+				BD01E14F248DAD2D00A5C52B /* SettingsView.swift in Sources */,
 				BD01E14B248D5C0100A5C52B /* Constants.swift in Sources */,
 				BD10C9BB248D39DD00C6521B /* AppDelegate.swift in Sources */,
 				BD10C9CF248D3EC300C6521B /* BLEManager.swift in Sources */,
+				BD01E14D248DACC900A5C52B /* HomeView.swift in Sources */,
+				BD01E151248DB57100A5C52B /* BluetoothDeviceSelection.swift in Sources */,
 				BD10C9BD248D39DD00C6521B /* SceneDelegate.swift in Sources */,
 				BD10C9BF248D39DD00C6521B /* ContentView.swift in Sources */,
 			);
